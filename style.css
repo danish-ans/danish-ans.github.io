@@ -204,12 +204,12 @@
 		font-size: 26px;
 	}
 }
-@-webkit-keyframes blink-caret { 
+@keyframes blink-caret { 
 	50% { 
 		border-color: transparent; 
 	} 
 }
-em {
+/* em {
 	border-right: .1em solid black;
 	width: 20ch;
 	white-space: nowrap;
@@ -218,7 +218,7 @@ em {
   	color: #3295dd;
 	-webkit-animation: typing 5s steps(21, end),
 	blink-caret .5s step-end infinite alternate;
-}
+} */
 #typeline {
 	color: pink;
 }
@@ -343,8 +343,7 @@ em {
 }
 
 @media screen and (min-width: 768px) {
-	.heading {
-	}
+
 	.heading .section-heading {
 	    font-size: 30px;
 	}
@@ -370,9 +369,7 @@ em {
     z-index: 2;
     margin: 20px auto 0;
 }
-.about .box {
-	
-}
+
 .about .box::before {
 	background-color: rgb(73, 235, 170);
     content: "";
