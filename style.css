@@ -76,7 +76,7 @@
 }
 .th-third::after {
 	content: "";
-	background-image: url('top-header-1.jpg');
+	background-image: url('top-header-2.jpg');
 	background-repeat: no-repeat;
 	background-size: 180px 180px;
 	margin-left: -10%;
