@@ -462,6 +462,11 @@
 	margin: 0 auto;
 	margin-bottom: 10px;
   border-radius: 30px;
+	transition:1.5s;
+}
+.img-me:hover{
+	cursor:default;
+	transform: scale(1.03);
 }
 .me .img-me+.who-me {
 	text-align: center;
