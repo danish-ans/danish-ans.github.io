@@ -556,7 +556,7 @@
 .modal-heading {
 	font-family: 'Open Sans';
 	padding: 10px 0;
-	color: var(--third-color);
+	color: red;
 }
 
 
@@ -611,7 +611,7 @@
 
 .contact .submit-btn {
 	background-color: transparent;
-	padding: 8px 20px;
+	padding: 8px 10px;
 	border: 2px solid #fff;
 	margin-top: 10px;
 	font-size: 14px;
@@ -632,6 +632,10 @@
 		font-size: 14px;
 	}
 }
+.temp{
+	color: #fff;
+}
+
 /* ----------- End Contact -------------- */
 
 

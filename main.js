@@ -58,13 +58,6 @@ function loop () {
     counter++
 }
 loop();
-$(document).on('click', '.navbar-toggler', function (event) {
-    $(this).toggleClass("menu-clicked");
-});
-$('.navbar-nav>li>a').on('click', function(){
-    $('.navbar-collapse').collapse('hide');
-    $(".navbar-toggler").toggleClass("menu-clicked");
-});
 
 ///////// mobile menu toggle /////////
 $(document).on('click', '.navbar-toggler', function (event) {
@@ -100,30 +93,61 @@ $('#myModal').on('show.bs.modal', function (event) {
 });
 
 ///////// Ajax for Save Contact Form data /////////
-$('#contactForm').on("submit", function(event){  
-    event.preventDefault();  
-    if(confirm("Are you sure you want to send this?"))
-    {
-        $.ajax({  
-            url:"http://localhost:8080/",  
-            method:"POST",  
-            data:$('#contactForm').serialize(),  
-            beforeSend:function(){  
-                $('#submit').text("Sending");  
-            },  
-            success:function(data){  
-                $('#insert_form_new')[0].reset();  
-                alert('Successfull');
-                $('#submit').text("Submit"); 
-                //window.location.reload();
-            },
-            error: function(XMLHttpRequest, textStatus, errorThrown) { 
-                $('#submit').text("Submit"); 
-                $('#alertmessage').text("Failed!!! Please try again..."); 
-                //alert("Status: " + textStatus); alert("Error: " + errorThrown); 
-            } 
-        }); 
-    }
-});
+// function postContactToGoogle() {
+//     $('#contactForm').on("submit", function(event){  
+//         event.preventDefault();  
+//         if(confirm("Are you sure you want to send this?"))
+//         {
+//             $.ajax({  
+//                 url:"http://localhost:8080/test/save.php",  
+//                 method:"POST",  
+//                 data:$('#contactForm').serialize(),  
+//                 beforeSend:function(){  
+//                     $('#submit').text("Sending");  
+//                 },  
+//                 success:function(data){  
+//                     $('#insert_form_new')[0].reset();  
+//                     alert('Successfull');
+//                     $('#submit').text("Submit"); 
+//                     // window.location.reload();
+//                 },
+//                 error: function(XMLHttpRequest, textStatus, errorThrown) { 
+//                     $('#submit').text("Submit"); 
+//                     $('#alertmessage').text("Failed!!! Please try again..."); 
+//                     //alert("Status: " + textStatus); alert("Error: " + errorThrown); 
+//                 } 
+//             }); 
+//         }
+//     });
+// }
+
+    // $('#contactForm').on("submit", function(event){  
+    //     event.preventDefault();  
+    //     if(confirm("Are you sure you want to send this?"))
+    //     {
+    //         $.ajax({  
+    //             url:"http://localhost:8080/",  
+    //             method:"POST",  
+    //             data:$('#contactForm').serialize(),  
+    //             beforeSend:function(){  
+    //                 $('#submit').text("Sending");  
+    //             },  
+    //             success:function(data){  
+    //                 $('#insert_form_new')[0].reset();  
+    //                 alert('Successfull');
+    //                 $('#submit').text("Submit"); 
+    //                 //window.location.reload();
+    //             },
+    //             error: function(XMLHttpRequest, textStatus, errorThrown) { 
+    //                 $('#submit').text("Submit"); 
+    //                 $('#alertmessage').text("Failed!!! Please try again..."); 
+    //                 //alert("Status: " + textStatus); alert("Error: " + errorThrown); 
+    //             } 
+    //         }); 
+    //     }
+    // });
+    
+
+
 
 window.scrollTo(0,1);
