@@ -462,7 +462,7 @@
 	margin: 0 auto;
 	margin-bottom: 10px;
   border-radius: 30px;
-  transition: 2s;
+  transition: 1.5s;
 }
 .img-me:hover{
 	cursor:default;
